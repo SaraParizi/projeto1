@@ -1,0 +1,193 @@
+body {
+  /*codigo completo */
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+
+  /*agrupamento do codigo atalho ou short hand */
+  /*background: color image position/size */
+
+  background: var(--bg-url) top center/cover;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*configurações de variaveis para dark/light mode*/
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --cor-fundo: rgba(255, 255, 255, 0.5);
+  --corli-back: rgba(255, 255, 255, 0.1);
+  --icone-swith-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --cor-fundo: rgba(0, 0, 0, 0.5);
+  --corli-back: rgba(0, 0, 0, 0.05);
+  --icone-swith-url: url(./assets/sun.svg);
+}
+/*Configurações aplicado a todas as caixas body*/
+body * {
+  font-family: "Inter", serif;
+}
+body * {
+  color: var(--text-color);
+}
+
+/*Configurações da box principal: Container*/
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  /*border: 1px solid red;
+  TIRAR BORDA DO FINAL, APENAS PARA VISUALIZAR A CAIXA E CONSEGUIR ENCAIXAR ELA MELHOR*/
+  padding: 24px;
+}
+
+/*Configurqações do profile*/
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  margin: auto;
+}
+
+#profile p {
+  font-optical-sizing: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*Configurações do swith*/
+#switch {
+  width: 64px;
+  height: 24px;
+  position: relative;
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+
+  background: white var(--icone-swith-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--corli-back);
+  border: 1px solid var(--cor-fundo);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/*Configurações da lista*/
+/* tirando as marcações da lista*/
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 70px 0 0;
+}
+
+/*congiurando cada elemento da lista*/
+ul li a {
+  /*border: 1px solid green;
+   bordar somente para visualizar as caixas e sua movimentações*/
+  display: flex;
+  padding: 16px 24px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: var(--corli-back);
+  border: 1px solid var(--cor-fundo);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+/* pseudo-seletor: MOVIMENTAÇÃO QUANDO PASSAR O MOUSE EM CIMA*/
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid var var(--text-color);
+}
+
+/*Configurações social links*/
+#social-links {
+  display: flex;
+  justify-content: center;
+
+  padding: 40px 0;
+  font-size: 30px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+
+  transition: background 0.2s;
+}
+
+#social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 16px;
+}
+
+/*Consigurações rodapé*/
+footer {
+  padding: 24px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* media queries, mudando o fundo */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
