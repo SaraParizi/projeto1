@@ -17,7 +17,7 @@ Trata-se de um **protótipo criado durante as aulas** como exercício prático p
 
 ## 👩‍💻 Desenvolvido por
 
-[Seu Nome Aqui], durante o programa de formação da [Rocketseat](https://www.rocketseat.com.br/).
+Sara Parizi, durante o programa de formação da [Rocketseat](https://www.rocketseat.com.br/).
 
 ---
 
